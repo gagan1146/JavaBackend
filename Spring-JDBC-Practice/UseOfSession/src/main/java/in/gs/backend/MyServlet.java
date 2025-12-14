@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/myservlet")
 public class MyServlet extends HttpServlet {
@@ -21,7 +22,9 @@ public class MyServlet extends HttpServlet {
 
         if ("gagan sharma".equals(name1) && "12345".equals(password1)) {
 
-            req.setAttribute("name1", name1);
+//            req.setAttribute("name1", name1);
+        	HttpSession session = req.getSession();
+        	session.setAttribute("name1", name1);
 
             RequestDispatcher rd = req.getRequestDispatcher("/home.jsp");
             rd.forward(req, resp);

@@ -4,9 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>About-Us</title>
 </head>
 <body>
+	<a href = "profile.jsp">Profile</a> &nbsp; &nbsp;
+	<a href = "home.jsp">Home</a> &nbsp; &nbsp;
+	<a href = "login.jsp">Login</a> &nbsp; &nbsp;
+	<a href = "about.jsp">About</a> &nbsp; &nbsp;
+    <%
+        String myname = (String) session.getAttribute("name1");
+    %>
 
+    <h2>Welcome to about us page, <%= myname %></h2>
 </body>
 </html>

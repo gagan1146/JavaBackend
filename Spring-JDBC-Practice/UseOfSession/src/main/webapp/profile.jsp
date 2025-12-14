@@ -4,13 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home</title>
+<title>Profile</title>
 </head>
 <body>
+	<a href = "profile.jsp">Profile</a> &nbsp; &nbsp;
+	<a href = "home.jsp">Home</a> &nbsp; &nbsp;
+	<a href = "login.jsp">Login</a> &nbsp; &nbsp;
+	<a href = "about.jsp">About</a> &nbsp; &nbsp;
     <%
-        String myname = (String) request.getAttribute("name1");
+        String myname = (String) session.getAttribute("name1");
     %>
 
-    <h2>Welcome <%= myname %></h2>
+    <h2>Welcome to profile page, <%= myname %></h2>
 </body>
 </html>
